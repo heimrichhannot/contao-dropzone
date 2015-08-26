@@ -1,0 +1,21 @@
+<script>
+	(function($){
+		$(document).ready(function() {
+			Dropzone.autoDiscover = false;
+			new Dropzone('<?php echo $this->id; ?>', {
+				url : window.location,
+				paramName: '<?php echo $this->name; ?>',
+				maxFilesize: '<?php echo $this->maxFilesize; ?>',
+				acceptedFiles: '<?php echo $this->acceptedFiles; ?>',
+				previewsContainer: '<?php echo $this->id; ?> .dropzone-previews',
+				uploadMultiple: <?php echo $this->uploadMultiple ? 'true' : 'false'; ?>,
+				maxFiles: <?php echo ($this->uploadMultiple ? 'null' : '1'); ?>
+			}).on("processing", function() {
+					$(".dz-message").css("padding", "12px 18px 0");
+				});
+			$("div.tl_formbody_submit").css("display", "none");
+		});
+
+	})(jQuery)
+
+</script>
