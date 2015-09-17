@@ -18,5 +18,5 @@ if(TL_MODE == 'FE')
 {
 	// Add the scripts
 	$GLOBALS['TL_CSS']['dropzone'] = 'assets/dropzone/' . $GLOBALS['TL_ASSETS']['DROPZONE'] . '/css/dropzone.min.css';
-	$GLOBALS['TL_JAVASCRIPT']['dropzone'] = 'assets/dropzone/' . $GLOBALS['TL_ASSETS']['DROPZONE'] . '/js/dropzone.min.js';
+	$GLOBALS['TL_JAVASCRIPT']['dropzone'] = 'assets/dropzone/' . $GLOBALS['TL_ASSETS']['DROPZONE'] . '/js/dropzone' . (!$GLOBALS['TL_CONFIG']['debugMode'] ? '.min' : '') . '.js|static';
 }
