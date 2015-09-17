@@ -30,6 +30,8 @@ class FormDropZone extends \Upload
 	 */
 	public function __construct($arrAttributes=null)
 	{
+		$GLOBALS['TL_CSS']['dropzone'] = 'assets/dropzone/' . $GLOBALS['TL_ASSETS']['DROPZONE'] . '/css/dropzone.min.css';
+
 		// Dropzone Upload
 		if(!empty($_FILES))
 		{
