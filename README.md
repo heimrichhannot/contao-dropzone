@@ -1,3 +1,5 @@
+@abandoned - use heimrichhannot/contao-multifileupload instead.
+
 # Contao Dropzone
 
 Contao front end widget that provides [dropzonejs.com] (http://www.dropzonejs.com/) functionality.
